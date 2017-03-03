@@ -1,6 +1,7 @@
+import axios from 'axios';
+
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const LOAD_NEXT_ARTICLE = 'LOAD_NEXT_ARTICLE';
-
 
 const receiveArticles = function (articles) {
   return {
@@ -11,9 +12,10 @@ const receiveArticles = function (articles) {
 
 export const loadArticles = function () {
   return function (dispatch) {
-    fetch('/api/articles')
-      .then(res => res.json())
+    axios.get('/api/articles')
+      .then(res => res.data)
       .then(articles => {
+        console.log(articles)
         const action = receiveArticles(articles);
         dispatch(action);
       })
