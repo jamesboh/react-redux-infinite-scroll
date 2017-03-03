@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "build-css & webpack -w & nodemon server.js",
-    "build-css": "node-sass -w public/style.scss -o public"
+    "build-css": "node-sass -w public/style.scss -o public",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "keywords": [],
   "author": "",
