@@ -36,7 +36,14 @@ export default class Articles extends Component {
           this.props.loadedArticles && this.props.loadedArticles.map(article => {
             return (
               <article key={article.id}>
-                <h2>{article.title}</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: article.title }}></h2>
+                <figure>
+                	<picture>
+                		<img src={article.hero.url} alt={article.hero.alt} />
+                	</picture>
+                </figure>
+                <div className="item-content" dangerouslySetInnerHTML={{ __html: article.content }}>
+                </div>
               </article>
             )
           })
