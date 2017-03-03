@@ -56,6 +56,16 @@ p {
   margin-bottom: 20px;
   line-height: 1.5; }
 
+img {
+  width: 100%;
+  display: block; }
+
+picture {
+  display: block; }
+
+figure {
+  position: relative; }
+
 .item-content {
   padding: 20px; }
 
@@ -67,6 +77,28 @@ article:nth-child(odd) .item-content {
   color: white;
   background-color: black; }
 
+article:nth-child(odd) figure.hero:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px 50px 40px -20px white;
+  -moz-box-shadow: inset 0px 50px 40px -20px white;
+  box-shadow: inset 0px 50px 40px -20px white; }
+
+article:nth-child(odd) figure.hero:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px -50px 40px -20px black;
+  -moz-box-shadow: inset 0px -50px 40px -20px black;
+  box-shadow: inset 0px -50px 40px -20px black; }
+
 article:nth-child(even) h2 {
   color: white;
   background-color: black; }
@@ -75,9 +107,24 @@ article:nth-child(even) .item-content {
   color: black;
   background-color: white; }
 
-img {
+article:nth-child(even) figure.hero:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
   width: 100%;
-  display: block; }
+  height: 100%;
+  -webkit-box-shadow: inset 0px 50px 40px -20px black;
+  -moz-box-shadow: inset 0px 50px 40px -20px black;
+  box-shadow: inset 0px 50px 40px -20px black; }
 
-picture {
-  display: block; }
+article:nth-child(even) figure.hero:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0px -50px 40px -20px white;
+  -moz-box-shadow: inset 0px -50px 40px -20px white;
+  box-shadow: inset 0px -50px 40px -20px white; }

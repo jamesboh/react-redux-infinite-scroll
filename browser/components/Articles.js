@@ -37,7 +37,7 @@ export default class Articles extends Component {
             return (
               <article key={article.id}>
                 <h2 dangerouslySetInnerHTML={{ __html: article.title }}></h2>
-                <figure>
+                <figure className="hero">
                 	<picture>
                 		<img src={article.hero.url} alt={article.hero.alt} />
                 	</picture>
