@@ -3,19 +3,18 @@ import axios from 'axios';
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES';
 export const LOAD_NEXT_ARTICLE = 'LOAD_NEXT_ARTICLE';
 
-const receiveArticles = function (articles) {
+const receiveArticles = (articles) => {
   return {
     type: RECEIVE_ARTICLES,
     receivedArticles: articles
   };
 };
 
-export const loadArticles = function () {
-  return function (dispatch) {
+export const loadArticles = () => {
+  return (dispatch) => {
     axios.get('/api/articles')
       .then(res => res.data)
       .then(articles => {
-        console.log(articles)
         const action = receiveArticles(articles);
         dispatch(action);
       })
@@ -23,7 +22,7 @@ export const loadArticles = function () {
   };
 };
 
-export const loadNextArticle = function() {
+export const loadNextArticle = () => {
   return {
     type: LOAD_NEXT_ARTICLE
   }

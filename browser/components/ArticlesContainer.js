@@ -2,14 +2,14 @@ import { connect } from 'react-redux';
 import { loadArticles, loadNextArticle } from '../action-creators';
 import Articles from './Articles';
 
-const mapStateToProps = function (state) {
+const mapStateToProps = (state) => {
   return {
     loadedArticles: state.loadedArticles,
     remainingArticles: state.remainingArticles
   };
 };
 
-const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     onLoadArticles: () => dispatch(loadArticles()),
     nextArticle: () => dispatch(loadNextArticle())
