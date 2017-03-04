@@ -20,7 +20,7 @@ export default class Articles extends Component {
 
 	infiniteScroll () {
 		if (this.props.remainingArticles.length) {
-			if ((window.innerHeight + window.scrollY) >= document.getElementById('articles-wrapper').scrollHeight) {
+			if ((window.innerHeight*1.3 + window.scrollY) >= document.getElementById('articles-wrapper').scrollHeight) {
 				this.props.nextArticle();
 				return
 			} 

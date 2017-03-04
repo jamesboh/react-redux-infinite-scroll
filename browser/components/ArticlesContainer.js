@@ -10,10 +10,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {
+	return {
 		onLoadArticles: () => dispatch(loadArticles()),
 		nextArticle: () => dispatch(loadNextArticle())
-  };
+	};
 };
 
 const componentCreator = connect(mapStateToProps, mapDispatchToProps);
