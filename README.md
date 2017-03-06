@@ -10,6 +10,5 @@ Built with Node.js v7.0.0
 ```
 npm install
 npm start
-
 ```
-Then go to localhost:8000
+Go to localhost:8000
