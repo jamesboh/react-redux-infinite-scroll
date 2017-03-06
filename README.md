@@ -12,3 +12,4 @@ npm install
 npm start
 
 ```
+Then go to localhost:8000
